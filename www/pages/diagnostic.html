@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>MuskHave - Diagnostic</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark" aria-label="Main NavBar">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="ping.html">Ping</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="wifiinfo.html">WiFi Informations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Diagnostic</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dnschecker.html">DNS Checker</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div class="modal modal-tour position-static d-block py-5" tabindex="-1" role="dialog" id="modalTour">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-6 shadow">
+                <div class="modal-body p-5">
+                    <h2 class="fw-bold mb-0" id="diagnosticContainer">Diagnostic</h2>
+
+                    <ul class="d-grid gap-4 my-5 list-unstyled">
+                        <li class="d-flex gap-4">
+                            <div>
+                                <h5 class="mb-0" id="rootedContainer"></h5>
+                            </div>
+                        </li>
+                        <li class="d-flex gap-4">
+                            <div>
+                                <h5 class="mb-0">Data Roaming</h5>
+                                <p id="dataRoamingContainer"></p>
+                            </div>
+                        </li>
+                        <li class="d-flex gap-4">
+                            <div>
+                                <h5 class="mb-0">ADB (debug)</h5>
+                                <p id="adbContainer"></p>
+                            </div>
+                        </li>
+                        <li class="d-flex gap-4">
+                            <div>
+                                <h5 class="mb-0">Architecture</h5>
+                                <p id="architectureContainer"></p>
+                            </div>
+                        </li>
+                        <li class="d-flex gap-4">
+                            <div>
+                                <h5 class="mb-0">Battery level</h5>
+                                <p id="batteryContainer"></p>
+                            </div>
+                        </li>
+                        <li class="d-flex gap-4">
+                            <div>
+                                <h5 class="mb-0">Location mode</h5>
+                                <p id="locationModeContainer"></p>
+                            </div>
+                        </li>
+                        <li class="d-flex gap-4">
+                            <div>
+                                <h5 class="mb-0">Bluetooth</h5>
+                                <p id="bluetoothContainer"></p>
+                            </div>
+                        </li>
+                        <li class="d-flex gap-4">
+                            <div>
+                                <h5 class="mb-0">Camera</h5>
+                                <p id="cameraContainer"></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="container fixed-bottom footer d-flex justify-content-center py-3 bg-light">
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../settings.html" class="nav-link">Settings</a></li>
+    </ul>
+</footer>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../cordova.js"></script>
+<script src="../js/diagnostic.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

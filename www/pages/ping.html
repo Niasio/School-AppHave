@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <title>MuskHave - Ping</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark" aria-label="Main NavBar">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav me-auto mb-2">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Ping</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="wifiinfo.html">WiFi Informations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="diagnostic.html">Diagnostic</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dnschecker.html">DNS Checker</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="px-4 py-5 my-5">
+    <div class="container">
+      <div class="intro">
+        <h2 class="text-center">Send pings to an IP</h2>
+        <p class="text-center">Enter a valid IP address or DNS in the field.</p>
+      </div>
+      <form class="d-flex justify-content-center flex-wrap" method="post">
+        <div class="mb-3"><input class="form-control" id="floatingInput" pattern="((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}" name="ping" placeholder="8.8.8.8"></div>
+        <div class="mb-3"><button class="btn btn-primary" id="submitButtonPing" type="submit" disabled>Ping !</button></div>
+      </form>
+    </div>
+  </section>
+
+  <h5 class="mb-0 text-center" style="white-space: pre;" id="result"></h5>
+  <hr />
+  <div class="justify-content-center flex-wrap text-center" id="previousPingDiv">
+    <p class="mb-0"><u>Previous ping:</u></p>
+    <ul class="list-unstyled" id="pingHistoryList">
+
+    </ul>
+  </div>
+</main>
+
+<footer class="container fixed-bottom footer d-flex justify-content-center py-3 bg-light">
+  <ul class="nav nav-pills">
+    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+    <li class="nav-item"><a href="../settings.html" class="nav-link">Settings</a></li>
+  </ul>
+</footer>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../cordova.js"></script>
+<script src="../js/ping.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

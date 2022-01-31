@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <title>MuskHave - Main</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav me-auto mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/ping.html">Ping</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/wifiinfo.html">WiFi Informations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/diagnostic.html">Diagnostic</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/dnschecker.html">DNS Checker</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                        <h1 class="display-4 fw-bold lh-1">Welcome to MuskHave!</h1>
+                        <p class="lead">A completely OpenSource application that aims to provide you with a small toolbox, specifically dedicated to networking and telecom enthusiasts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <img class="rounded-lg-3" src="img/musk.png" alt="" width="150">
+            </div>
+        </main>
+
+        <footer class="container fixed-bottom footer d-flex justify-content-center py-3 bg-light">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="settings.html" class="nav-link">Settings</a></li>
+            </ul>
+        </footer>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
