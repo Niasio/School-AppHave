@@ -22,7 +22,7 @@ function onWifiInfoLoad()
 function successWifiInfo( ipInformation ) {
     console.log("successWifiInfo");
 
-    document.getElementById("wifiInfoContainer").textContent = "IP: " + ipInformation.ip + " subnet: " + ipInformation.subnet;
+    document.getElementById("wifiInfoContainer").textContent = "IP: " + ipInformation.ip + "\r\nSubnet: " + ipInformation.subnet;
 }
 
 /** Displays the error */

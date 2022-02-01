@@ -43,10 +43,10 @@
     </feature>
     <name>MuskHave</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Best app ever :)
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author>
+        Jimmy Fontaine
     </author>
     <content src="index.html" />
     <access origin="*" />
